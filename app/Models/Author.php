@@ -12,4 +12,11 @@ class Author extends Model
         "image",
         "description"
     ];
+
+
+    public function posts()
+{
+    return $this->hasMany(Post::class, 'author_id');
+}
+
 }
